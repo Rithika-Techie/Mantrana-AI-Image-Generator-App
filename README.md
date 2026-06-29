@@ -232,21 +232,16 @@ Mantrana AI uses **Clerk** for authentication.
 
 ---
 
-## 📸 Screenshots
+*Note: Any new screenshots added to the project should be placed in `docs/images/` and referenced here to keep the documentation organized and maintainable.*
 
-Here is a look at the application's main user flow:
+### 1. Sign-in Page
+![Sign-in Page](docs/images/landing-page.png)
 
-### 1. Sign In / Authentication
-![Sign In Page](docs/images/sign-in.png)
+### 2. User Dashboard
+![Dashboard Interface](docs/images/dashboard.png)
 
-### 2. Main Dashboard & Image Generation
-![Dashboard & Create New](docs/images/dashboard-create.png)
-
-### 3. Global Admin Dashboard
-![Admin Dashboard](docs/images/admin-dashboard.png)
-
-> **Note for Contributors:** 
-> Any new screenshots added to the project should be placed in the `docs/images/` folder and referenced in this README to keep the documentation organized and maintainable.
+### 3. Global Admin History
+![Admin Panel](docs/images/history.png)
 
 ---
 
