@@ -46,9 +46,9 @@ In the rapidly evolving digital landscape, content creators, marketers, and desi
 
 Watch the complete walkthrough of the project below.
 
-https://github.com/Rithika-Techie/Mantrana-AI-Image-Generator-App/raw/master/public/demo.mp4
+<video src="https://github.com/Rithika-Techie/Mantrana-AI-Image-Generator-App/raw/master/public/demo.mp4" controls="controls" width="100%"></video>
 
-> If the video doesn't autoplay, click it to open in full screen.
+> *If the video does not autoplay, simply click the play button above.*
 
 ## ✨ Key Features
 - **High-Quality Image Generation**: Leveraging advanced FLUX models for photorealistic quality via Pollinations.ai.
