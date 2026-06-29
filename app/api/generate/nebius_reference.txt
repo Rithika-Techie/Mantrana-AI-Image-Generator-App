@@ -1,0 +1,68 @@
+import { OpenAI } from 'openai';
+import { NextResponse } from 'next/server';
+
+export const dynamic = 'force-dynamic';
+
+const client = new OpenAI({
+  baseURL: 'https://api.studio.nebius.com/v1/',
+  apiKey: process.env.NEBIUS_API_KEY,
+});
+
+
+const BLOCK_PATTERNS = [
+  /\b(kill|murder|stab|shoot|blood|gore|beheading|torture|suicide|self harm|self-harm)\b/i,
+  /\b(heroin|cocaine|lsd|meth|marijuana|weed|crack|opium|mdma|ecstasy)\b/i,
+  /\b(gun|pistol|rifle|ak47|grenade|bomb|explosive|shotgun|sniper)\b/i,
+  /\b(rape|raping|molest|kidnap|trafficking|child porn|cp|incest|terrorist|isis)\b/i,
+];
+
+
+function isIllicit(prompt: string) {
+  return BLOCK_PATTERNS.some((pattern) => pattern.test(prompt));
+}
+
+
+export async function POST(req: Request) {
+  try {
+    const { prompt } = await req.json();
+
+    if (!prompt) {
+      return NextResponse.json(
+        { error: 'Prompt is required' },
+        { status: 400 }
+      );
+    }
+
+
+    if (isIllicit(prompt)) {
+      return NextResponse.json(
+        { error: 'Image generation blocked due to prohibited content.' },
+        { status: 403 }
+      );
+    }
+
+ 
+    const response = await client.images.generate({
+      model: 'black-forest-labs/flux-dev',
+      response_format: 'url',
+      extra_body: {
+        response_extension: 'webp',
+        width: 1024,
+        height: 1024,
+        num_inference_steps: 28,
+        seed: -1,
+      },
+      prompt: prompt,
+    });
+
+    console.log('Image generated', response);
+
+    return NextResponse.json({ imageUrl: response.data[0].url });
+  } catch (error: any) {
+    console.error('Error generating image:', error?.message || error);
+    return NextResponse.json(
+      { error: 'Failed to generate image' },
+      { status: 500 }
+    );
+  }
+}
