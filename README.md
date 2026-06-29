@@ -243,6 +243,9 @@ Mantrana AI uses **Clerk** for authentication.
 ### 3. Global Admin History
 ![Admin Panel](docs/images/history.png)
 
+### 4. Stripe Pro Checkout
+![Checkout Page](docs/images/checkout.png)
+
 ---
 
 ## 🚢 Deployment Guide
