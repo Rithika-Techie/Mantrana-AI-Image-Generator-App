@@ -46,7 +46,7 @@ In the rapidly evolving digital landscape, content creators, marketers, and desi
 
 Watch the complete walkthrough of the project below.
 
-<video src="https://github.com/Rithika-Techie/Mantrana-AI-Image-Generator-App/raw/master/public/demo.mp4" controls="controls" width="100%"></video>
+https://github.com/Rithika-Techie/Mantrana-AI-Image-Generator-App/raw/master/public/demo.mp4
 
 > *If the video does not autoplay, simply click the play button above.*
 
