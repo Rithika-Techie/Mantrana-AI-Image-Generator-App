@@ -234,9 +234,17 @@ Mantrana AI uses **Clerk** for authentication.
 
 ## 📸 Screenshots
 
-*![Landing Page Placeholder](https://via.placeholder.com/800x400?text=Landing+Page)*
-*![Dashboard Placeholder](https://via.placeholder.com/800x400?text=Dashboard+Interface)*
-*![Generated Image Placeholder](https://via.placeholder.com/800x400?text=Generated+Image)*
+| Authentication | Dashboard / Generation |
+|----------------|------------------------|
+| ![](docs/images/auth.png) | ![](docs/images/dashboard.png) |
+
+| Image History | Global Admin Panel |
+|---------------|--------------------|
+| ![](docs/images/history.png) | ![](docs/images/admin.png) |
+
+| Pricing / Checkout |
+|--------------------|
+| ![](docs/images/pricing.png) |
 
 ---
 
